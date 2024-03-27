@@ -1,0 +1,129 @@
+/*/\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\ 
+ /  \  /  \  /  \  /  \  /  \  /  \  /  \  /  \  /  \desctop responsive start  /  \  /  \  /  \  /  \  /  \  /  \
+/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \*/
+@media screen and (max-width: 1170px) {
+  .container {
+    margin: 0 4%;
+  }
+}
+/*/\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\ 
+ /  \  /  \  /  \  /  \  /  \  /  \  /  \  /  \  /  \desctop responsive end    /  \  /  \  /  \  /  \  /  \  /  \
+/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \*/
+
+/*/\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\ 
+ /  \  /  \  /  \  /  \  /  \  /  \  /  \  /  \  /  \laptop responsive start\  /  \  /  \  /  \  /  \  /  \  /  \
+/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \*/
+@media screen and (max-width: 1024px) {
+  header .icons {
+    display: inline-flex;
+  }
+  header #close-icon {
+    display: none;
+  }
+  header #check:checked ~ .icons #menu-icon {
+    display: none;
+  }
+  header #check:checked ~ .icons #close-icon {
+    display: block;
+  }
+  header nav .menu .singin-trial,
+  header nav .menu ul {
+    flex-direction: column;
+  }
+  header nav .menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: 0;
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 80px;
+    align-items: center;
+    background: #fff;
+    overflow: hidden;
+    border-radius: 10px;
+    z-index: 100;
+  }
+  header #check:checked ~ .menu {
+    height: 100vh;
+  }
+  #hero {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .hreo-image {
+    order: 1;
+  }
+  .hreo-conten {
+    order: 2;
+  }
+}
+/*/\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\ 
+ /  \  /  \  /  \  /  \  /  \  /  \  /  \  /  \  /  \laptop responsive end  \  /  \  /  \  /  \  /  \  /  \  /  \
+/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \*/
+
+/*/\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\ 
+ /  \  /  \  /  \  /  \  /  \  /  \  /  \  /  \  /  \tab responsive start   \  /  \  /  \  /  \  /  \  /  \  /  \
+/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \*/
+@media screen and (max-width: 834px) {
+  #about .container,
+  .populae-packages-items,
+  .newsletter {
+    grid-template-columns: 1fr;
+  }
+  .promotion p {
+    width: 100%;
+  }
+  .newsletter .image {
+    height: 235px;
+  }
+  .newsletter .image img {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -15%);
+  }
+  .newsletter .content {
+    order: 2;
+  }
+  footer .container {
+    grid-template-columns: 2fr 2fr;
+    gap: 50px;
+  }
+  footer .container .company-about {
+    width: 100%;
+  }
+}
+/*/\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\ 
+ /  \  /  \  /  \  /  \  /  \  /  \  /  \  /  \  /  \tab responsive end  /  \  /  \  /  \  /  \  /  \  /  \  /  \
+/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \*/
+
+/*/\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\ 
+ /  \  /  \  /  \  /  \  /  \  /  \  /  \  /  \  /  \mobile responsive start   /  \  /  \  /  \  /  \  /  \  /  \
+/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \*/
+@media screen and (max-width: 425px) {
+  .work-title p {
+    width: 100%;
+  }
+  .work-cards {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  .newsletter {
+    position: relative;
+    padding-bottom: 100px;
+  }
+  .newsletter .content .subscribe {
+    flex-direction: column;
+  }
+  .newsletter .content .subscribe button {
+    position: absolute;
+    transform: translate(24%, 85%);
+  }
+  footer .container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+/*/\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\ 
+ /  \  /  \  /  \  /  \  /  \  /  \  /  \  /  \  /  \mobile responsive end  \  /  \  /  \  /  \  /  \  /  \  /  \
+/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \*/

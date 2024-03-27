@@ -1,0 +1,543 @@
+/*/\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\ 
+ /  \  /  \  /  \  /  \  /  \  /  \  /  \  /  \  /  \  /  \font start \  /  \  /  \  /  \  /  \  /  \  /  \  /  \ 
+/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+/*/\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\ 
+ /  \  /  \  /  \  /  \  /  \  /  \  /  \  /  \  /  \  /  \font end/  \  /  \  /  \  /  \  /  \  /  \  /  \  /  \ 
+/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \*/
+
+/*/\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\ 
+ /  \  /  \  /  \  /  \  /  \  /  \  /  \  /  \  /  \univarsal sector start \  /  \  /  \  /  \  /  \  /  \  /  \
+/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+  scroll-behavior: smooth;
+}
+:root {
+  --praimaryColor: #060640;
+  --socondaryColor: #00e5cc;
+  --pragrahpColor: #9090a7;
+
+  --whiteColor: #fff;
+  --blockColor: #000;
+  --grayColor: #828297;
+
+  --bodyBgCoclor: #ecf9ff;
+}
+body {
+  font-family: "Inter", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+p {
+  color: var(--pragrahpColor);
+  font-size: 16px;
+  font-weight: 400;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+li {
+  list-style: none;
+}
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+.btn {
+  display: inline-flex;
+  height: 60px;
+  padding: 0px 42px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  background: var(--Primary, #060640);
+  color: var(--whiteColor);
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+.btn:hover {
+  transform: scale(1.1);
+}
+img {
+  width: 100%;
+  height: auto;
+}
+/*/\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\ 
+ /  \  /  \  /  \  /  \  /  \  /  \  /  \  /  \  /  \univarsal sector end/  \  /  \  /  \  /  \  /  \  /  \  /  \
+/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \*/
+
+/*/\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\ 
+ /  \  /  \  /  \  /  \  /  \  /  \  /  \  /  \  /  \header section start/  \  /  \  /  \  /  \  /  \  /  \  /  \
+/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \*/
+/* navbar section start  */
+header {
+  background: url(../images/Group.png) no-repeat,
+    url(../images/Group1.png) no-repeat, var(--bodyBgCoclor);
+  background-position: 100% 23%, 100% 100%;
+  background-size: 35%, 45%;
+  padding: 50px 0;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px;
+  background: var(--whiteColor);
+  border-radius: 10px;
+  position: relative;
+}
+header nav .menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 200px;
+}
+header nav .menu ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+}
+header nav .menu ul a {
+  color: var(--grayColor);
+  text-transform: capitalize;
+  font-size: 14px;
+  font-weight: 500;
+}
+header nav .menu ul a:hover {
+  color: var(--socondaryColor);
+}
+header nav .menu .singin-trial {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+}
+header nav .menu .singin-trial a {
+  text-transform: capitalize;
+  color: var(--blockColor);
+}
+header nav .menu .singin-trial a:hover,
+header nav .menu .singin-trial .btn:hover {
+  color: var(--socondaryColor);
+}
+header #check {
+  display: none;
+}
+header .container {
+  position: relative;
+}
+header .icons {
+  position: absolute;
+  right: 5%;
+  font-size: 2.5rem;
+  color: var(--blockColor);
+  cursor: pointer;
+  display: none;
+  cursor: pointer;
+}
+/* navbar section end */
+
+/* hero section start */
+#hero {
+  padding: 131px 0 0 0;
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  overflow: hidden;
+}
+.hreo-conten h1 {
+  font-size: 50px;
+}
+.hreo-conten h1 img {
+  width: 50px;
+  height: 50px;
+}
+.hreo-conten .des {
+  margin: 30px 0;
+}
+.hreo-conten .buttons {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+.hreo-conten .play-bnt i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--whiteColor);
+  color: var(--socondaryColor);
+  filter: drop-shadow(0px 10px 30px rgba(0, 229, 204, 0.1));
+  cursor: pointer;
+}
+.hreo-conten .play-bnt i:hover {
+  background: var(--praimaryColor);
+  transform: scale(1.2);
+}
+.hreo-conten .review {
+  border-radius: 14px;
+  background: var(--whiteColor);
+  backdrop-filter: blur(5px);
+  padding: 21px;
+  margin-top: 70px;
+}
+.hreo-conten .review .review-icon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hreo-conten .review .review-icon img {
+  width: 32px;
+  height: 32px;
+}
+.hreo-conten .review .review-icon .counter {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.hreo-conten .review .review-icon .counter img {
+  width: 20px;
+  height: 20px;
+}
+.hreo-conten .review .review-icon .counter p {
+  font-size: 14px;
+  color: var(--blockColor);
+  font-weight: 400;
+}
+.hreo-conten .review-des {
+  margin-top: 10px;
+  font-weight: 400;
+  margin-top: 10px;
+}
+/* hero section end */
+/*/\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\ 
+ /  \  /  \  /  \  /  \  /  \  /  \  /  \  /  \  /  \header section end  /  \  /  \  /  \  /  \  /  \  /  \  /  \
+/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \*/
+
+/*/\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\ 
+ /  \  /  \  /  \  /  \  /  \  /  \  /  \  /  \  /  \work section start  /  \  /  \  /  \  /  \  /  \  /  \  /  \
+/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \*/
+#work {
+  padding: 110px 0;
+}
+.work-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 70px;
+}
+.work-title h2 {
+  font-size: 45px;
+}
+.work-title p {
+  width: 431px;
+  text-align: center;
+}
+.work-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+  gap: 30px;
+}
+.work-cards .card {
+  border-radius: 14px;
+  background: var(--whiteColor);
+  border: 2px solid rgba(6, 6, 64, 0);
+  box-shadow: 0px 30px 50px 0px #03032515;
+  padding: 30px;
+  position: relative;
+  z-index: 1;
+}
+.work-cards .card::after {
+  content: "";
+  width: 0;
+  height: 100%;
+  background: var(--bodyBgCoclor);
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 14px;
+  z-index: -1;
+}
+.work-cards .card:hover::after {
+  width: 100%;
+}
+.work-cards .card img {
+  width: 70px;
+  height: 70px;
+}
+.work-cards .card h3 {
+  font-size: 24px;
+  margin: 50px 0 10px 0;
+}
+.work-cards .card p {
+  line-height: 28px;
+}
+/*/\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\ 
+ /  \  /  \  /  \  /  \  /  \  /  \  /  \  /  \  /  \work section end \  /  \  /  \  /  \  /  \  /  \  /  \  /  \
+/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \*/
+
+/*/\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\ 
+ /  \  /  \  /  \  /  \  /  \  /  \  /  \  /  \  /  \about section start /  \  /  \  /  \  /  \  /  \  /  \  /  \
+/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \*/
+#about {
+  padding: 100px 0;
+  background: url(../images/Group\ 33761.png) no-repeat;
+  background-position: 100% 0;
+  background-size: 10%;
+}
+#about .container {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: 80px;
+}
+#about .container .content h2 {
+  font-size: 45px;
+}
+#about .container .content .a-i-dtails {
+  display: flex;
+  margin-top: 40px;
+}
+#about .container .content .a-i-dtails img {
+  width: 60px;
+  height: 60px;
+  margin-right: 25px;
+}
+#about .container .content .a-i-dtails .contant h3 {
+  font-size: 20px;
+}
+/*/\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\ 
+ /  \  /  \  /  \  /  \  /  \  /  \  /  \  /  \  /  \about section end\  /  \  /  \  /  \  /  \  /  \  /  \  /  \
+/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \*/
+
+/*/\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\ 
+ /  \  /  \  /  \  /  \  /  \  /  \  /  \  /  \  /  \popular-packages section start  /  \  /  \  /  \  /  \  /  \  
+/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \*/
+#popular-packages {
+  padding: 105px 0;
+  background: url(../images/Group.png) no-repeat,
+    url(../images/Group-2.png) no-repeat, var(--bodyBgCoclor);
+  background-position: 100% -55%, 0 100%;
+  background-size: 35%, 25%;
+}
+#popular-packages .container h2 {
+  font-size: 45px;
+  margin-bottom: 75px;
+}
+.populae-packages-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+  gap: 30px;
+}
+.populae-packages-items .imte {
+  border-radius: 14px;
+  border: 1px solid #fff;
+  background: var(--bodyBgCoclor);
+  padding: 10px;
+}
+.populae-packages-items .imte:hover {
+  background: var(--whiteColor);
+}
+.populae-packages-items .imte .item-image {
+  position: relative;
+}
+.populae-packages-items .imte .item-image p img {
+  width: 20px;
+  height: 20px;
+}
+.populae-packages-items .imte .item-image p {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--blockColor);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(4px);
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  padding: 5px 10px;
+}
+.populae-packages-items .imte img {
+  border-radius: 10px;
+}
+.populae-packages-items .imte h3 {
+  font-size: 20px;
+  margin: 20px 0;
+}
+.populae-packages-items .imte .packging-riview {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.populae-packages-items .imte .packging-riview img {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  margin: -8px;
+}
+.populae-packages-items .imte .packging-riview .rivew-image {
+  display: flex;
+  margin: 8px 0 8px 8px;
+}
+.populae-packages-items .imte .packging-riview .rivew-image p {
+  margin-left: 10px;
+  font-size: 14px;
+}
+.populae-packages-items .imte .packging-riview .rivew-conent p {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--socondaryColor);
+}
+/*/\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\ 
+ /  \  /  \  /  \  /  \  /  \  /  \  /  \  /  \  /  \popular-packages section end \  /  \  /  \  /  \  /  \  /  \
+/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \*/
+
+/*/\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\ 
+ /  \  /  \  /  \  /  \  /  \  /  \  /  \  /  \  /  \global promotion section start  /  \  /  \  /  \  /  \  /  \
+/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \*/
+.promotion {
+  padding: 110px 0;
+}
+.promotion h2 {
+  font-size: 45px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.promotion p {
+  width: 764px;
+  text-align: center;
+  margin: 0 auto;
+}
+.promotion img {
+  margin-top: 70px;
+}
+/*/\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\ 
+ /  \  /  \  /  \  /  \  /  \  /  \  /  \  /  \  /  \global promotion section end \  /  \  /  \  /  \  /  \  /  \
+/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \*/
+
+/*/\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\ 
+ /  \  /  \  /  \  /  \  /  \  /  \  /  \  /  \  /  \newsletter section start  /  \  /  \  /  \  /  \  /  \
+/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \*/
+.newsletter {
+  background: url(../images/newsleterbg.png) no-repeat, var(--bodyBgCoclor);
+  background-position: 100% 0;
+  background-size: 40%;
+  padding: 60px;
+  border-radius: 16px;
+  display: grid;
+  grid-template-columns: 9fr 3fr;
+  gap: 100px;
+  margin-bottom: 110px;
+  position: relative;
+}
+.newsletter .content h2 {
+  font-size: 45px;
+  margin-bottom: 20px;
+}
+.newsletter .content p {
+  margin-bottom: 41px;
+}
+.newsletter .content .subscribe {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  border-radius: 6px;
+  background: var(--whiteColor);
+}
+.newsletter .content .subscribe input {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  background: none;
+}
+.newsletter .image img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 353px;
+  height: 436px;
+}
+/*/\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\ 
+ /  \  /  \  /  \  /  \  /  \  /  \  /  \  /  \  /  \newsletter section end \  /  \  /  \  /  \  /  \  /  \
+/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \*/
+
+/*/\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\ 
+ /  \  /  \  /  \  /  \  /  \  /  \  /  \  /  \  /  \footer section start/  \  /  \  /  \  /  \  /  \  /  \
+/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \*/
+footer {
+  padding: 85px 0 0 0;
+  background: #060640;
+}
+footer .container {
+  display: grid;
+  grid-template-columns: 5fr 2fr 2fr 3fr;
+}
+footer .container .company-about {
+  width: 350px;
+}
+footer .container img {
+  max-width: 150px;
+}
+footer .container .company-description {
+  line-height: 28px;
+  margin: 20px 0;
+}
+footer .container .social-icon i {
+  font-size: 30px;
+  margin-right: 8px;
+  color: var(--pragrahpColor);
+  cursor: pointer;
+}
+footer .container .social-icon i:hover {
+  color: var(--socondaryColor);
+}
+footer .container h3 {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--whiteColor);
+  margin-bottom: 20px;
+}
+footer .container ul li a {
+  color: var(--pragrahpColor);
+  margin-bottom: 10px;
+}
+footer .container ul li a:hover {
+  color: var(--socondaryColor);
+}
+footer .copyrightbg {
+  background: var(--blockColor);
+  margin-top: 49px;
+}
+footer .copyrightbg .container {
+  padding: 27px 0;
+  display: flex;
+  justify-content: space-between;
+}
+footer .container .copyright p {
+  color: var(--whiteColor);
+}
+/*/\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\    /\ 
+ /  \  /  \  /  \  /  \  /  \  /  \  /  \  /  \  /  \footer section end  /  \  /  \  /  \  /  \  /  \  /  \
+/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \/    \*/
